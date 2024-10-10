@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Orbitron;
+}
+
+header{
+    height: 100vh;
+    width: 100vw;
+    background-color: black ;
+    background-size: cover;
+}
+
+/*----Création de la nav-barre----*/
+
+.nav-barre{
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-barre a {
+    color: white;
+    font-size: 20px;
+}
+
+.nav-barre .logo {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.nav-barre .logo-project{
+    color: #00ff00;
+    filter: drop-shadow(0 0 20px rgb(0,255,0));
+}
+
+.nav-barre .nav-links ul{
+    display: flex;
+}
+
+.nav-barre .nav-links ul li{
+    margin: 0 25px;
+
+}
+
+.nav-barre .nav-links ul li.home a{
+    color: greenyellow;
+    font-weight: 600;
+}
+
+.nav-barre .menu-h{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 35px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .nav-barre{
+        padding: 0;
+    }
+    .nav-barre .logo{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+    .nav-barre .menu-h{
+        display: block;
+    }
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(101, 128, 101, 0.685);
+        backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-barre .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.3em;
+    }
+
+}
+
+/*-------------------------------------------------*/
+
+
+
+/*------Image de profile------*/
+.main-img{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.main-img .image{
+    width: 330px;
+    height: 50vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -90%);
+    border-radius: 100%;
+    box-shadow: 0 0 10px #00ff00, 0 0 30px #00ff00, 0 0 60px #00ff00;
+    background-image: url(belle-scene-dessin-anime.png);
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s linear;
+}
+
+.main-img .main-titre{
+    height: 50vh;
+    transform: translate(-10%, 20%);
+    color: #00ff00; 
+}
+
+
+.main-titre{
+    position: absolute;
+    top: 33%;
+    left: 42%;
+    padding: 1%;
+    width: 600px;
+    color: white;
+}
+
+.main-titre h1{
+    color: #00ff00;
+    font-size: 3.2rem;
+    padding: 10px;
+}
+
+
+.main-titre p{
+    padding: 20px;
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.social-link i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.1rem solid rgb(0, 255, 0);
+    border-radius: 50%;
+    color: #00ff00;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: 0.2s linear;
+}
+
+.social-link i:hover{
+    scale: 1.3;
+    filter: drop-shadow(0 0 10px rgb(0,255,0));
+    color: black;
+    border-color: rgb(0,255,0);
+}
+

@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body{
+    font-family: Orbitron;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    background-size: cover;
+}
+
+/*----Création de la nav-barre----*/
+
+.nav-barre{
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-barre a {
+    color: white;
+    font-size: 20px;
+}
+
+.nav-barre .logo {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.nav-barre .nav-links ul{
+    display: flex;
+}
+
+.nav-barre .nav-links ul li{
+    margin: 0 25px;
+
+}
+
+.nav-barre .nav-links ul li.home a{
+    color: greenyellow;
+    font-weight: 600;
+}
+
+.nav-barre .menu-h{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 35px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .nav-barre{
+        padding: 0;
+    }
+    .nav-barre .logo{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+    .nav-barre .menu-h{
+        display: block;
+    }
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(101, 128, 101, 0.685);
+        backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-barre .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.3em;
+    }
+}
+
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -300%); /* Centre le texte parfaitement */
+    font-size: 50px;
+}
+
+
+.neon-button {
+    font-family: Orbitron;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #00ff00;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 50px rgba(0, 255, 0, 0.3), 0 0 100px rgba(0, 255, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 10px #00ff00, 0 0 30px #00ff00, 0 0 60px #00ff00;
+}
